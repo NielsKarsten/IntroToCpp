@@ -8,7 +8,7 @@ int main()
 {
     int n;
     cin >> n;
-    double VectorA[n], VectorB[n];
+    double *VectorA = new double[n], *VectorB = new double[n];
     for (int i = 0; i < n; i++)
     {
         cin >> VectorA[i];

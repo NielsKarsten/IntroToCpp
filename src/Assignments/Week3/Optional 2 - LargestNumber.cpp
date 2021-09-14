@@ -9,7 +9,7 @@ int main()
     int n;
     cin >> n;
     int largest = 0;
-    int numbers[n];
+    int *numbers = new int[n];
     for (int i = 0; i < n; i++){
         cin >> numbers[i];
         if (numbers[i] > largest)
@@ -27,5 +27,6 @@ int main()
         }
 
     }
+    delete [] numbers;
     return 0;
 }

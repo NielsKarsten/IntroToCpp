@@ -14,7 +14,7 @@ int main()
     cin >> n;
 
     //Get the numbers
-    int numbers[n];
+    int *numbers = new int[n];
     int largestNum = 0;
     for(int i = 0; i < n; i++)
     {
@@ -26,7 +26,7 @@ int main()
     int intervalSize = ceil((double)largestNum / (double)l);
 
     //Initialize the histogram with 0 values
-    int histogram[l];
+    int *histogram = new int[l];
     for (int i = 0; i < l; i++)
     {
         histogram[i] = 0;
@@ -36,7 +36,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         int index = numbers[i] / intervalSize;
-        (index <= l-1) ? histogram[index]++ : histogram[l-1];
+        (index <= l-1) ? histogram[index]++ : histogram[l-1]++;
     }
     
     //Print the histogram
@@ -44,5 +44,9 @@ int main()
     {
         cout << i * intervalSize << ": " << histogram[i] << endl;
     }
+
+    delete [] numbers;
+    delete [] histogram;
+
     return 0;
 }

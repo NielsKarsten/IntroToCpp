@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     string userCommand;
     int number;
-    int bag[1000];
+    int *bag = new int[1000];
 
     //initialize bag Array with 0s
     for (int i = 0; i < 1000; i++) {
@@ -32,5 +32,6 @@ int main() {
             }
         }
     }
+    delete [] bag;
     return 0;
 }
