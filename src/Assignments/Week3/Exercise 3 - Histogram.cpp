@@ -4,18 +4,14 @@
 
 using namespace std;
 
-//Sort a stream of n numbers into a histogram with l intervals. Each interval is 10 values 
+//Sort a stream of n numbers into a histogram with l intervals.
 int main()
 {
-    int l = 0;
-    cin >> l;
-
-    int n = 0;
-    cin >> n;
+    int l = 0, n = 0, largestNum = 0;
+    cin >> l >> n;
 
     //Get the numbers
     int *numbers = new int[n];
-    int largestNum = 0;
     for(int i = 0; i < n; i++)
     {
         cin >> numbers[i];
@@ -25,14 +21,8 @@ int main()
     //Calculate interval size
     int intervalSize = ceil((double)largestNum / (double)l);
 
-    //Initialize the histogram with 0 values
-    int *histogram = new int[l];
-    for (int i = 0; i < l; i++)
-    {
-        histogram[i] = 0;
-    } 
-
-    //sort the numbers into the histogram
+    //Initialize the histogram with 0 values and sorting numbers into the correct interval
+    int *histogram = new int[l]();
     for (int i = 0; i < n; i++)
     {
         int index = numbers[i] / intervalSize;

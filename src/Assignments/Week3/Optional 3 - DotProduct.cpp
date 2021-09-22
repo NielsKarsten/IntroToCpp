@@ -24,5 +24,8 @@ int main()
         dotProduct += VectorA[i] * VectorB[i];
     }
     cout << dotProduct << endl;
+
+    delete[] VectorA;
+    delete[] VectorB;
     return 0;
 }

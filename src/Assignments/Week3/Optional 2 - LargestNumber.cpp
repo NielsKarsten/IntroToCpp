@@ -6,9 +6,8 @@ using namespace std;
 //Program that looks through n numbers and highlights the first occourance of the largest number 
 int main()
 {
-    int n;
+    int n, largest = 0;
     cin >> n;
-    int largest = 0;
     int *numbers = new int[n];
     for (int i = 0; i < n; i++){
         cin >> numbers[i];

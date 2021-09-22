@@ -15,7 +15,6 @@ int main()
         pi += pow(-1, i) / (2 * i + 1);
     }
     pi *= 4;
-
     cout << pi;
     return 0;
 }
