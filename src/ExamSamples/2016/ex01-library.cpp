@@ -52,10 +52,16 @@ vector<double> sumRows(double * A, unsigned int n){
 // Exercise 1 (e)
 // Implement this function
 vector<double> sumCols(double * A, unsigned int n){
+    vector<double> sumCols(n);
+    for (unsigned int i = 0; i < n; i++)
+    {
+        for (unsigned int j = 0; j < n; j++)
+        {
+            sumCols[i] += A[i * n + j];
+        }
+    }
 
-    
-    // Put your code here
-    
+        // Put your code here
 }
 
 // Do not modify
