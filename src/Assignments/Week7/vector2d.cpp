@@ -44,4 +44,3 @@ double v2d::length() {
     double y2 = y*y;
     return sqrt(x2 + y2);
 }
-

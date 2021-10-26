@@ -1,14 +1,11 @@
 #include "shapes.h"
 #include <cmath>
 
-
-void Shape::rotate()
-{
-}
+Shape::Shape() {}
 
 Rectangle::Rectangle(double height, double width){
-    height = height;
-    width = width;
+    x = height;
+    y = width;
 }
 
 double Rectangle::area(){
@@ -29,9 +26,14 @@ double Rectangle::width(){
     return y;
 }
 
+void Rectangle::rotate(){
+    double temp = x;
+    x = y;
+    y = temp;
+}
 
-Square::Square(double length){
-    length = length;
+Square::Square(double x){
+    length = x;
 }
 
 double Square::area(){
@@ -50,8 +52,12 @@ double Square::width(){
     return length;
 }
 
-Circle::Circle(double radius){
-    radius = radius;
+void Square::rotate(){
+    //do nothing
+}
+
+Circle::Circle(double x){
+    radius = x;
 }
 
 double Circle::area(){
@@ -70,5 +76,6 @@ double Circle::width(){
     return height();
 }
 
-
-
+void Circle::rotate(){
+    //do nothing
+}
