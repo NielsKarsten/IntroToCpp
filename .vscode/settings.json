@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "ranges": "cpp"
     }
 }
